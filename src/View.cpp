@@ -817,6 +817,13 @@ namespace osg_graph_viz {
 
   }//mouseRelease
 
+  void View::selectedNodesDropped(const std::list<osg::ref_ptr<osg_graph_viz::Node> >& selectedNodes, const double mouse_x, const double mouse_y)
+  {
+    std::cout <<" ================================================================\n";
+    std::cout << "Dropped selected nodes at pos("<<mouse_x <<','<<mouse_y<<")\n";
+    std::cout << "Selected " << selectedNodes.size() << " Nodes\n";
+  }
+
   void View::handleNewEdge(osg::ref_ptr<osg_graph_viz::Node> toNode, int toIdx) {
     // handle fold state here?
     addEdge = false;

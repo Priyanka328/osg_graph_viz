@@ -87,6 +87,7 @@ namespace osg_graph_viz {
 
     // implements osgGA::GUIEventHandler::handle
     bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa);
+    void selectedNodesDropped(const std::list<osg::ref_ptr<osg_graph_viz::Node> >& selectedNodes, const double mouse_x, const double mouse_y);
     void setCamera(osg::Camera *c) {camera = c;}
     void resize(int w, int h);
     void createTab(const std::string &name);
